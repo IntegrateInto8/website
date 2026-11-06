@@ -95,6 +95,9 @@ table.info th { width: 28%; background: #f4efe6; color: var(--navy); font-weight
 table.grades th { width: auto; background: #f4efe6; }
 table.grades td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 table.grades td.net { font-weight: 700; color: var(--wood-dark); }
+table.grades td.chips { white-space: normal; min-width: 150px; }
+.chip { display: inline-block; font-size: .78rem; background: #efe7da; color: var(--wood-dark); border-radius: 4px; padding: 0 6px; margin: 2px 4px 2px 0; white-space: nowrap; }
+.chip.lead { background: var(--navy); color: #fff; }
 .notes { color: var(--sub); font-size: .9rem; padding-left: 1.2em; }
 .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; counter-reset: step; padding: 0; margin: 0; list-style: none; }
 .flow li { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 14px 14px; position: relative; text-align: center; font-weight: 700; color: var(--navy); }
