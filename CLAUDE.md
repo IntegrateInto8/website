@@ -13,6 +13,7 @@
 - `recruit.html`: 求人と応募フォーム
 - `privacy.html`: 個人情報の取り扱い
 - `assets/style.css`: 見た目（全ページ共通。スマホは幅760px以下）
+- 上の帯: 左上の三本線で左から一覧（ページへのリンク）が出る、言語はプルダウン。従業員専用ページと自動販売機オンラインの帯は company の `StaffHeader.html` で同じ見た目にしている（直すときは両方そろえる）
 - `assets/i18n.js`: 言語の切り替え（日本語・English・မြန်မာ）。HTML には日本語を書き、`data-i18n="キー"` の要素を選んだ言語の文に置き換える。訳は `I18N` に足す。固有名詞（会社名など）は訳さない
 - `assets/config.js`: 応募フォームの送り先（`APPLY_URL`）と、従業員専用ページの URL（`STAFF_URL`）
 - `assets/form.js`: 応募フォームを送る

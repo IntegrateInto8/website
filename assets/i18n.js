@@ -18,6 +18,10 @@ const I18N = {
   'footer.privacy':{ en: 'Privacy Policy', my: 'ကိုယ်ရေးအချက်အလက် ကိုင်တွယ်ပုံ' },
   'footer.staff':  { en: 'For employees (login required)', my: 'ဝန်ထမ်းများအတွက် (ဝင်ရောက်ရန် လိုအပ်)' },
 
+  'nav.staffpage': { en: "Employees only page", my: "ဝန်ထမ်းများသာ စာမျက်နှာ" },
+  'drawer.site': { en: "Website", my: "ဝက်ဘ်ဆိုက်" },
+  'drawer.staff': { en: "For employees", my: "ဝန်ထမ်းများအတွက်" },
+  'drawer.close': { en: "Close", my: "ပိတ်မည်" },
   // トップ
   'hero.title':  { en: 'Fast, reliable framing for wooden homes.', my: 'သစ်သားအိမ်များ၏ ဘောင်ဆောက်လုပ်ငန်းကို မြန်ဆန်စွာ၊ စိတ်ချရစွာ။' },
   'hero.lead':   { en: 'We frame wooden detached houses and apartment buildings, mainly with the 2×4 (two-by-four) method.',
@@ -188,6 +192,8 @@ const I18N = {
   'test.bar':  { en: 'Test version (for checking before release). The content may change.', my: 'စမ်းသပ်ဗားရှင်း (ထုတ်ဝေမီ စစ်ဆေးရန်)။ အကြောင်းအရာ ပြောင်းလဲနိုင်ပါသည်။' },
 };
 
+// 一覧の日本語（HTML に書いていない文）
+const DRAWER_JA = { 'nav.home': 'ホーム', 'nav.business': '事業内容', 'nav.strength': '強み', 'nav.company': '会社概要', 'nav.recruit': '求人・応募', 'footer.privacy': '個人情報の取り扱い', 'nav.staffpage': '従業員専用ページ', 'drawer.site': 'ホームページ', 'drawer.staff': '従業員の方へ', 'drawer.close': '閉じる', 'menu': 'メニュー' };
 function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
 
 const params = new URLSearchParams(location.search);
@@ -237,25 +243,56 @@ function applyLang() {
     if (!original.has(el)) original.set(el, el.getAttribute('placeholder') || '');
     el.setAttribute('placeholder', t(el.dataset.i18nPh) || original.get(el));
   });
-  document.querySelectorAll('.langs button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  const ls = document.querySelector('.lang-select'); if (ls) ls.value = lang;
   document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
 }
 window.i18n = { t: key => t(key), get lang() { return lang; } };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const box = document.querySelector('.langs');
-  if (box) {
-    for (const [code, label] of LANGS) {
-      const b = document.createElement('button');
-      b.type = 'button'; b.textContent = label; b.dataset.lang = code;
-      b.addEventListener('click', () => { lang = code; store('site-lang', code); applyLang(); });
-      box.append(b);
-    }
+  // 言語のプルダウン
+  const sel = document.querySelector('.lang-select');
+  if (sel) {
+    for (const [code, label] of LANGS) { const o = document.createElement('option'); o.value = code; o.textContent = label; sel.append(o); }
+    sel.addEventListener('change', () => { lang = sel.value; store('site-lang', lang); applyLang(); });
   }
-  const menu = document.querySelector('.menu-btn'), nav = document.querySelector('.nav');
-  if (menu && nav) {
-    menu.addEventListener('click', () => { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', String(open)); });
-    nav.addEventListener('click', e => { if (e.target.tagName === 'A') nav.classList.remove('open'); });
+  // 左上の三本線を押すと、左から一覧が出る
+  const burger = document.querySelector('.burger');
+  if (burger) {
+    const backdrop = document.createElement('div'); backdrop.className = 'drawer-backdrop';
+    const drawer = document.createElement('nav'); drawer.className = 'drawer'; drawer.id = 'drawer'; drawer.setAttribute('aria-hidden', 'true');
+    document.body.append(backdrop, drawer);
+    const open = yes => { drawer.classList.toggle('open', yes); backdrop.classList.toggle('open', yes); drawer.setAttribute('aria-hidden', String(!yes)); burger.setAttribute('aria-expanded', String(yes)); };
+    const tx = k => t(k) || DRAWER_JA[k] || k;
+    const page = (location.pathname.split('/').pop() || 'index.html');
+    const build = () => {
+      drawer.textContent = '';
+      const head = document.createElement('div'); head.className = 'dh';
+      const name = document.createElement('span'); name.textContent = document.querySelector('.brand').textContent;
+      const close = document.createElement('button'); close.type = 'button'; close.textContent = '×'; close.setAttribute('aria-label', tx('drawer.close'));
+      close.addEventListener('click', () => open(false));
+      head.append(name, close); drawer.append(head);
+      const h = text => { const e = document.createElement('h3'); e.textContent = text; drawer.append(e); };
+      const a = (key, href, current) => {
+        const e = document.createElement('a'); e.href = href; e.textContent = tx(key);
+        if (current) e.setAttribute('aria-current', 'page');
+        e.addEventListener('click', () => open(false)); drawer.append(e);
+      };
+      h(tx('drawer.site'));
+      a('nav.home', 'index.html', page === 'index.html');
+      a('nav.business', 'index.html#business');
+      a('nav.strength', 'index.html#strength');
+      a('nav.company', 'index.html#company');
+      a('nav.recruit', 'recruit.html', page === 'recruit.html');
+      a('footer.privacy', 'privacy.html', page === 'privacy.html');
+      h(tx('drawer.staff'));
+      a('nav.staffpage', window.SITE.STAFF_URL);
+      burger.setAttribute('aria-label', tx('menu'));
+    };
+    build();
+    document.addEventListener('langchange', build);
+    burger.addEventListener('click', () => open(!drawer.classList.contains('open')));
+    backdrop.addEventListener('click', () => open(false));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') open(false); });
   }
   // 上の帯の高さ（ページ内リンクで移ったとき、見出しが帯に隠れないようにする）
   const header = document.querySelector('.site-header');
