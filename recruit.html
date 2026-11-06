@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><!-- テスト版のあいだは検索に出さない。本番で外す -->
+<title>求人・応募｜合同会社下條工務店</title>
+<meta name="description" content="合同会社下條工務店の求人ページです。木造住宅の建方・造作を行う大工を募集しています。経験のない方、外国籍の方も歓迎します。">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/config.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/form.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">合同会社下條工務店</a>
+    <button class="menu-btn" type="button" aria-expanded="false" data-i18n="menu">メニュー</button>
+    <nav class="nav">
+      <a href="index.html" data-i18n="nav.home">ホーム</a>
+      <a href="index.html#business" data-i18n="nav.business">事業内容</a>
+      <a href="index.html#company" data-i18n="nav.company">会社概要</a>
+      <a href="recruit.html" aria-current="page" data-i18n="nav.recruit">求人・応募</a>
+    </nav>
+    <div class="langs" aria-label="Language"></div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">CAREERS</p>
+      <h2 data-i18n="rc.title">求人・応募</h2>
+      <p class="lead" data-i18n="rc.lead">一緒に家を建てる仲間を募集しています。経験のない方も、外国籍の方も歓迎します。</p>
+
+      <h3 data-i18n="rc.job">募集内容</h3>
+      <table class="info">
+        <tr><th data-i18n="rc.kind">職種</th><td data-i18n="rc.kindv">大工（建方・造作）</td></tr>
+        <tr><th data-i18n="rc.type">雇用形態</th><td data-i18n="rc.typev">正社員</td></tr>
+        <tr><th data-i18n="rc.place">勤務地</th><td data-i18n="rc.placev">本社（東京都武蔵野市）と各現場</td></tr>
+        <tr><th data-i18n="rc.hours">勤務時間</th><td data-i18n="rc.hoursv">8:00〜18:00（休憩あり）</td></tr>
+        <tr><th data-i18n="rc.off">休日</th><td data-i18n="rc.offv">土曜・日曜、特別休暇（年間休日113日）</td></tr>
+        <tr><th data-i18n="rc.pay">給与</th><td data-i18n="rc.payv">経験・能力に応じて決定（面接のときにご説明します）</td></tr>
+        <tr><th data-i18n="rc.perk">待遇</th><td data-i18n="rc.perkv">社会保険あり（健康保険・厚生年金・雇用保険・労災保険）。資格取得の受講費用は会社負担。賞与あり（会社の業績による）。</td></tr>
+        <tr><th data-i18n="rc.qual">応募資格</th><td data-i18n="rc.qualv">学歴不問（中卒・高卒の方も応募できます）。経験のない方、外国籍の方も歓迎します。</td></tr>
+        <tr><th data-i18n="rc.welcome">大歓迎</th><td><strong data-i18n="rc.welcomev">体力・筋力に自信のある方</strong></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2 data-i18n="rc.flow">応募の流れ</h2>
+      <ol class="flow">
+        <li data-i18n="rc.f1">フォームで応募</li>
+        <li data-i18n="rc.f2">会社から連絡</li>
+        <li data-i18n="rc.f3">面接</li>
+        <li data-i18n="rc.f4">採用</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="apply">
+    <div class="wrap">
+      <h2 data-i18n="rc.form">応募フォーム</h2>
+      <p class="lead" data-i18n="rc.formlead">下の項目を入れて送ってください。会社から連絡します。</p>
+      <form class="apply" id="applyForm" novalidate>
+        <div class="field">
+          <label for="f-name"><span data-i18n="f.name">お名前</span><span class="req" data-i18n="req">必須</span></label>
+          <input id="f-name" name="name" autocomplete="name" maxlength="100" required>
+        </div>
+        <div class="field">
+          <label for="f-kana" data-i18n="f.kana">フリガナ</label>
+          <input id="f-kana" name="kana" maxlength="100">
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="f-tel" data-i18n="f.tel">電話番号</label>
+            <input id="f-tel" name="tel" type="tel" autocomplete="tel" maxlength="30">
+          </div>
+          <div class="field">
+            <label for="f-mail" data-i18n="f.mail">メールアドレス</label>
+            <input id="f-mail" name="mail" type="email" autocomplete="email" maxlength="200">
+          </div>
+        </div>
+        <p class="hint" style="margin:-8px 0 0" data-i18n="f.contact">電話番号かメールアドレスの、どちらかを入れてください。</p>
+        <div class="two">
+          <div class="field">
+            <label for="f-age" data-i18n="f.age">年齢</label>
+            <input id="f-age" name="age" type="number" min="15" max="99" inputmode="numeric">
+          </div>
+          <div class="field">
+            <label for="f-nation" data-i18n="f.nation">国籍</label>
+            <input id="f-nation" name="nation" maxlength="50">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-status" data-i18n="f.status">在留資格（外国籍の方）</label>
+          <input id="f-status" name="status" maxlength="100" data-i18n-ph="f.statusph" placeholder="例：特定技能、永住者">
+        </div>
+        <div class="field">
+          <label for="f-exp" data-i18n="f.exp">大工の経験</label>
+          <select id="f-exp" name="exp">
+            <option value="" data-i18n="f.exp0">選んでください</option>
+            <option value="なし" data-i18n="f.exp1">なし</option>
+            <option value="1年未満" data-i18n="f.exp2">1年未満</option>
+            <option value="1〜3年" data-i18n="f.exp3">1〜3年</option>
+            <option value="3年以上" data-i18n="f.exp4">3年以上</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg" data-i18n="f.msg">メッセージ（経験・資格・働き始められる時期など）</label>
+          <textarea id="f-msg" name="message" maxlength="2000"></textarea>
+        </div>
+        <!-- 迷惑な自動送信よけ（人には見えない欄。入っていたら送らない） -->
+        <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="agree">
+          <input id="f-agree" name="agree" type="checkbox" required>
+          <label for="f-agree"><span data-i18n="f.agree">個人情報の取り扱いに同意します。</span><span class="req" data-i18n="req">必須</span>
+            <br><a href="privacy.html" target="_blank" rel="noopener" data-i18n="f.agreelink">個人情報の取り扱いを読む</a></label>
+        </div>
+        <button class="submit" type="submit" data-i18n="f.send">送信する</button>
+        <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© <span data-year></span> 合同会社下條工務店</div>
+    <nav>
+      <a href="index.html" data-i18n="nav.home">ホーム</a>
+      <a href="privacy.html" data-i18n="footer.privacy">個人情報の取り扱い</a>
+      <a class="staff-link" data-staff-link href="#" data-i18n="footer.staff">従業員の方へ（ログインが必要です）</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
