@@ -255,6 +255,25 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.addEventListener('click', () => { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', String(open)); });
     nav.addEventListener('click', e => { if (e.target.tagName === 'A') nav.classList.remove('open'); });
   }
+  // 上の帯の高さ（ページ内リンクで移ったとき、見出しが帯に隠れないようにする）
+  const header = document.querySelector('.site-header');
+  const setH = () => header && document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  setH(); window.addEventListener('resize', setH);
+  // トップページ: 見ている欄（事業内容・強み・会社概要）の帯のリンクに印をつける
+  const navLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
+  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if (sections.length) {
+    const mark = () => {
+      const top = (header ? header.offsetHeight : 72) + 40;
+      let best = null;
+      for (const sec of sections) if (sec.getBoundingClientRect().top <= top) best = sec; // 見出しが帯のすぐ下より上に来た欄のうち、いちばん下
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) best = sections[sections.length - 1]; // ページの終わりでは最後の欄
+      navLinks.forEach(a => { if (best && a.getAttribute('href') === '#' + best.id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    };
+    window.addEventListener('scroll', mark, { passive: true });
+    window.addEventListener('resize', mark);
+    mark();
+  }
   // テスト版の帯（config.js の TEST が true のあいだ）
   if (window.SITE.TEST) {
     const bar = document.createElement('div');
