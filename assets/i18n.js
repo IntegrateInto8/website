@@ -75,7 +75,7 @@ const I18N = {
   'rc.typev': { en: "Full-time employee. 3-month trial period. Experienced carpenters become permanent employees (no fixed term) after the trial period. Beginners first work on a 3-year fixed-term contract, then become permanent employees.", my: "အမြဲတမ်း ဝန်ထမ်း။ အစမ်းခန့်ကာလ 3 လ။ အတွေ့အကြုံ ရှိသူများသည် အစမ်းခန့်ကာလ ပြီးနောက် သက်တမ်း မသတ်မှတ်သော အလုပ်ခန့်အပ်မှု ဖြစ်ပါမည်။ အတွေ့အကြုံ မရှိသူများသည် 3 နှစ် သက်တမ်းသတ်မှတ် စာချုပ်ဖြင့် အရင် အလုပ်လုပ်ပြီးနောက် သက်တမ်း မသတ်မှတ်သော အလုပ်ခန့်အပ်မှု ဖြစ်ပါမည်။" },
   'rc.place':   { en: 'Work location', my: 'အလုပ်နေရာ' },
   'rc.hours':   { en: 'Working hours', my: 'အလုပ်ချိန်' },
-  'rc.hoursv': { en: "8:00–18:00 (breaks 10:00–10:30, 12:00–13:00 and 15:00–15:30; 8 working hours). The 5 minutes of preparation before work and the 5 minutes of cleanup after work count as working time, and a preparation and cleanup allowance is paid.", my: "8:00–18:00 (နားချိန် 10:00–10:30၊ 12:00–13:00၊ 15:00–15:30၊ အလုပ်ချိန် 8 နာရီ)။ အလုပ်မစမီ ပြင်ဆင်ချိန် 5 မိနစ်နှင့် အလုပ်ပြီးနောက် သိမ်းဆည်းချိန် 5 မိနစ်ကို အလုပ်ချိန်အဖြစ် သတ်မှတ်ပြီး ပြင်ဆင်ခြင်းနှင့် သိမ်းဆည်းခြင်း ထောက်ပံ့ကြေး ပေးပါသည်။" },
+  'rc.hoursv': { en: "8:00–18:00\n* Breaks 10:00–10:30, 12:00–13:00 and 15:00–15:30\n* 8 working hours\n* The 5 minutes of preparation before work and the 5 minutes of cleanup after work count as working time, and a preparation and cleanup allowance is paid.", my: "8:00–18:00\n※ နားချိန် 10:00–10:30၊ 12:00–13:00၊ 15:00–15:30\n※ အလုပ်ချိန် 8 နာရီ\n※ အလုပ်မစမီ ပြင်ဆင်ချိန် 5 မိနစ်နှင့် အလုပ်ပြီးနောက် သိမ်းဆည်းချိန် 5 မိနစ်ကို အလုပ်ချိန်အဖြစ် သတ်မှတ်ပြီး ပြင်ဆင်ခြင်းနှင့် သိမ်းဆည်းခြင်း ထောက်ပံ့ကြေး ပေးပါသည်။" },
   'rc.off':     { en: 'Days off', my: 'ပိတ်ရက်' },
   'rc.offv': { en: "Saturdays, Sundays and special holidays (9 days a year). 113 days off a year. There is some Saturday work (overtime pay is paid as required by law).", my: "စနေ၊ တနင်္ဂနွေနှင့် အထူးခွင့်ရက် (တစ်နှစ် 9 ရက်)။ တစ်နှစ်လျှင် ပိတ်ရက် 113 ရက်။ စနေနေ့ အလုပ်ဆင်းရသည့်အခါ ရှိသည် (အချိန်ပိုကြေးကို ဥပဒေအတိုင်း ပေးပါသည်)။" },
   'rc.pay':     { en: 'Pay', my: 'လစာ' },
@@ -128,7 +128,7 @@ const I18N = {
   'rc.raise': { en: "Pay raise", my: "လစာတိုး" },
   'rc.raisev': { en: "Reviewed every year (based on company results and work performance)", my: "နှစ်စဉ် ပြန်လည်သုံးသပ်သည် (ကုမ္ပဏီ၏ ရလဒ်နှင့် လုပ်ငန်းစွမ်းဆောင်ရည်အပေါ် မူတည်သည်)" },
   'rc.bonus': { en: "Bonus", my: "ဆုကြေးငွေ" },
-  'rc.bonusv': { en: "1 to 3 times a year (when the company makes a profit). Decided by the health award, material lifting sales, site sales, driving allowance and buy-back of unused paid leave that has expired. See also the table below.", my: "တစ်နှစ်လျှင် 1 ကြိမ်မှ 3 ကြိမ် (ကုမ္ပဏီ အမြတ်ရှိသည့်အခါ)။ ကျန်းမာရေးဆု၊ ပစ္စည်းသယ်တင်ခြင်း ရောင်းရငွေ၊ လုပ်ငန်းခွင် ရောင်းရငွေ၊ ယာဉ်မောင်း ထောက်ပံ့ကြေးနှင့် မသုံးဘဲ သက်တမ်းကုန်သွားသော လစာပါသော ခွင့် ပြန်ဝယ်ခြင်းဖြင့် သတ်မှတ်ပါသည်။ အောက်ပါ ဇယားကိုလည်း ကြည့်ပါ။" },
+  'rc.bonusv': { en: "1 to 3 times a year (when the company makes a profit). Decided by the health award, material lifting sales, site sales, driving allowance and buy-back of unused paid leave that has expired. See \"Grades and estimated take-home pay\" below.", my: "တစ်နှစ်လျှင် 1 ကြိမ်မှ 3 ကြိမ် (ကုမ္ပဏီ အမြတ်ရှိသည့်အခါ)။ ကျန်းမာရေးဆု၊ ပစ္စည်းသယ်တင်ခြင်း ရောင်းရငွေ၊ လုပ်ငန်းခွင် ရောင်းရငွေ၊ ယာဉ်မောင်း ထောက်ပံ့ကြေးနှင့် မသုံးဘဲ သက်တမ်းကုန်သွားသော လစာပါသော ခွင့် ပြန်ဝယ်ခြင်းဖြင့် သတ်မှတ်ပါသည်။ အောက်ပါ \"အဆင့်နှင့် လက်ထဲရမည့်ငွေ ခန့်မှန်းခြေ\" ကို ကြည့်ပါ။" },
   'rc.ins': { en: "Insurance", my: "အာမခံ" },
   'rc.insv': { en: "Health insurance, employees' pension insurance, employment insurance, workers' accident insurance", my: "ကျန်းမာရေး အာမခံ၊ ပင်စင် အာမခံ၊ အလုပ်အကိုင် အာမခံ၊ လုပ်ငန်းခွင် ထိခိုက်မှု အာမခံ" },
   'rc.retire': { en: "Retirement age", my: "အငြိမ်းစား အသက်" },
@@ -204,7 +204,9 @@ function t(key) {
 function sentences(text) {
   const out = []; let cur = '', depth = 0;
   for (let i = 0; i < text.length; i++) {
-    const c = text[i]; cur += c;
+    const c = text[i];
+    if (c === '\n') { if (cur.trim()) out.push(cur.trim()); cur = ''; continue; } // 改行はそのまま改行にする
+    cur += c;
     if ('（('.includes(c)) depth++;
     else if ('）)'.includes(c)) depth = Math.max(0, depth - 1);
     else if (depth === 0 && (c === '。' || c === '။' || (c === '.' && text[i + 1] === ' '))) { out.push(cur.trim()); cur = ''; }
