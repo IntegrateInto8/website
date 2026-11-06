@@ -26,8 +26,8 @@ const I18N = {
   'hero.title':  { en: 'Fast, reliable framing for wooden homes.', my: 'သစ်သားအိမ်များ၏ ဘောင်ဆောက်လုပ်ငန်းကို မြန်ဆန်စွာ၊ စိတ်ချရစွာ။' },
   'hero.lead':   { en: 'We frame wooden detached houses and apartment buildings, mainly with the 2×4 (two-by-four) method.',
                    my: 'ကျွန်ုပ်တို့သည် 2×4 (တူးဘိုင်ဖိုး) နည်းစနစ်ကို အဓိကထား၍ သစ်သား လုံးချင်းအိမ်များနှင့် တိုက်ခန်းအဆောက်အအုံများ၏ ဘောင်ဆောက်လုပ်ငန်းကို ဆောင်ရွက်ပါသည်။' },
-  'hero.cta1':   { en: 'Our work', my: 'လုပ်ငန်းများ ကြည့်ရန်' },
-  'hero.cta2':   { en: 'Careers & apply', my: 'အလုပ်လျှောက်ရန်' },
+  'hero.cta1':   { en: 'See our work', my: 'လုပ်ငန်းများ ကြည့်ရန်' },
+  'hero.cta2':   { en: 'See careers', my: 'အလုပ်ခေါ်စာ ကြည့်ရန်' },
 
   'biz.eyebrow':    { en: 'OUR WORK', my: 'OUR WORK' },
   'biz.title':      { en: 'Our Work', my: 'လုပ်ငန်းများ' },
