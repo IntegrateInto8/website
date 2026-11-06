@@ -128,7 +128,7 @@ const I18N = {
   'rc.raise': { en: "Pay raise", my: "လစာတိုး" },
   'rc.raisev': { en: "Reviewed every year (based on company results and work performance)", my: "နှစ်စဉ် ပြန်လည်သုံးသပ်သည် (ကုမ္ပဏီ၏ ရလဒ်နှင့် လုပ်ငန်းစွမ်းဆောင်ရည်အပေါ် မူတည်သည်)" },
   'rc.bonus': { en: "Bonus", my: "ဆုကြေးငွေ" },
-  'rc.bonusv': { en: "1 to 3 times a year (when the company makes a profit). Decided by the health award, material lifting sales, site sales, driving allowance and buy-back of paid leave. See also the table below.", my: "တစ်နှစ်လျှင် 1 ကြိမ်မှ 3 ကြိမ် (ကုမ္ပဏီ အမြတ်ရှိသည့်အခါ)။ ကျန်းမာရေးဆု၊ ပစ္စည်းသယ်တင်ခြင်း ရောင်းရငွေ၊ လုပ်ငန်းခွင် ရောင်းရငွေ၊ ယာဉ်မောင်း ထောက်ပံ့ကြေးနှင့် လစာပါသော ခွင့် ပြန်ဝယ်ခြင်းဖြင့် သတ်မှတ်ပါသည်။ အောက်ပါ ဇယားကိုလည်း ကြည့်ပါ။" },
+  'rc.bonusv': { en: "1 to 3 times a year (when the company makes a profit). Decided by the health award, material lifting sales, site sales, driving allowance and buy-back of unused paid leave that has expired. See also the table below.", my: "တစ်နှစ်လျှင် 1 ကြိမ်မှ 3 ကြိမ် (ကုမ္ပဏီ အမြတ်ရှိသည့်အခါ)။ ကျန်းမာရေးဆု၊ ပစ္စည်းသယ်တင်ခြင်း ရောင်းရငွေ၊ လုပ်ငန်းခွင် ရောင်းရငွေ၊ ယာဉ်မောင်း ထောက်ပံ့ကြေးနှင့် မသုံးဘဲ သက်တမ်းကုန်သွားသော လစာပါသော ခွင့် ပြန်ဝယ်ခြင်းဖြင့် သတ်မှတ်ပါသည်။ အောက်ပါ ဇယားကိုလည်း ကြည့်ပါ။" },
   'rc.ins': { en: "Insurance", my: "အာမခံ" },
   'rc.insv': { en: "Health insurance, employees' pension insurance, employment insurance, workers' accident insurance", my: "ကျန်းမာရေး အာမခံ၊ ပင်စင် အာမခံ၊ အလုပ်အကိုင် အာမခံ၊ လုပ်ငန်းခွင် ထိခိုက်မှု အာမခံ" },
   'rc.retire': { en: "Retirement age", my: "အငြိမ်းစား အသက်" },
@@ -167,10 +167,10 @@ const I18N = {
   'g.c6': { en: "Bonus items", my: "ဆုကြေးငွေ အချက်များ" },
   'b.health': { en: "Health award", my: "ကျန်းမာရေးဆု" },
   'b.niage': { en: "Lifting", my: "ပစ္စည်းသယ်တင်" },
-  'b.leave': { en: "Leave buy-back", my: "ခွင့်ပြန်ဝယ်" },
+  'b.leave': { en: "Expired leave buy-back", my: "သက်တမ်းကုန် ခွင့်ပြန်ဝယ်" },
   'b.site': { en: "Site sales", my: "လုပ်ငန်းခွင် ရောင်းရငွေ" },
   'b.drive': { en: "Driving allowance", my: "ယာဉ်မောင်း ထောက်ပံ့ကြေး" },
-  'g.n5': { en: "Bonuses are paid 1 to 3 times a year when the company makes a profit, based on the items below (no bonus if there is no profit). Health award: for people who had no sudden days off. Lifting: from the material lifting sales of each site, for all workers there. Site sales and driving allowance: for site leaders. Leave buy-back: the company buys back paid leave that expires without being used.", my: "ကုမ္ပဏီ အမြတ်ရှိသည့်အခါ ဆုကြေးငွေကို တစ်နှစ်လျှင် 1 ကြိမ်မှ 3 ကြိမ် အောက်ပါ အချက်များဖြင့် သတ်မှတ်ပေးပါသည် (အမြတ်မရှိပါက ဆုကြေးငွေ မရှိပါ)။ ကျန်းမာရေးဆု - ရုတ်တရက် ခွင့်ယူခြင်း မရှိသူများ။ ပစ္စည်းသယ်တင် - လုပ်ငန်းခွင်တစ်ခုချင်းစီ၏ ပစ္စည်းသယ်တင်ခြင်း ရောင်းရငွေမှ အလုပ်လုပ်သူ အားလုံးအတွက်။ လုပ်ငန်းခွင် ရောင်းရငွေနှင့် ယာဉ်မောင်း ထောက်ပံ့ကြေး - လုပ်ငန်းခွင် ခေါင်းဆောင်များအတွက်။ ခွင့်ပြန်ဝယ် - မသုံးဘဲ သက်တမ်းကုန်သွားသော လစာပါသော ခွင့်ကို ကုမ္ပဏီက ပြန်ဝယ်ပါသည်။" },
+  'g.n5': { en: "Bonuses are paid 1 to 3 times a year when the company makes a profit, based on the items below (no bonus if there is no profit). Health award: for people who had no sudden days off. Lifting: from the material lifting sales of each site, for all workers there. Site sales and driving allowance: for site leaders. Expired leave buy-back: the company buys back unused paid leave that has expired.", my: "ကုမ္ပဏီ အမြတ်ရှိသည့်အခါ ဆုကြေးငွေကို တစ်နှစ်လျှင် 1 ကြိမ်မှ 3 ကြိမ် အောက်ပါ အချက်များဖြင့် သတ်မှတ်ပေးပါသည် (အမြတ်မရှိပါက ဆုကြေးငွေ မရှိပါ)။ ကျန်းမာရေးဆု - ရုတ်တရက် ခွင့်ယူခြင်း မရှိသူများအတွက်။ ပစ္စည်းသယ်တင် - လုပ်ငန်းခွင်တစ်ခုချင်းစီ၏ ပစ္စည်းသယ်တင်ခြင်း ရောင်းရငွေမှ အလုပ်လုပ်သူ အားလုံးအတွက်။ လုပ်ငန်းခွင် ရောင်းရငွေနှင့် ယာဉ်မောင်း ထောက်ပံ့ကြေး - လုပ်ငန်းခွင် ခေါင်းဆောင်များအတွက်။ သက်တမ်းကုန် ခွင့်ပြန်ဝယ် - မသုံးဘဲ သက်တမ်းကုန်သွားသော လစာပါသော ခွင့်ကို ကုမ္ပဏီက ပြန်ဝယ်ပါသည်။" },
   // 個人情報の取り扱い
   'pv.title':  { en: 'Privacy Policy', my: 'ကိုယ်ရေးအချက်အလက် ကိုင်တွယ်ပုံ' },
   'pv.lead':   { en: 'We handle the personal information we receive as follows.', my: 'ကျွန်ုပ်တို့ လက်ခံရရှိသော ကိုယ်ရေးအချက်အလက်များကို အောက်ပါအတိုင်း ကိုင်တွယ်ပါသည်။' },
@@ -200,11 +200,36 @@ function t(key) {
   if (lang === 'ja') return null;
   return (I18N[key] && I18N[key][lang]) || null;
 }
+// 文の終わり（。・။・英語の「. 」）で分ける。かっこの中では分けない
+function sentences(text) {
+  const out = []; let cur = '', depth = 0;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i]; cur += c;
+    if ('（('.includes(c)) depth++;
+    else if ('）)'.includes(c)) depth = Math.max(0, depth - 1);
+    else if (depth === 0 && (c === '。' || c === '။' || (c === '.' && text[i + 1] === ' '))) { out.push(cur.trim()); cur = ''; }
+  }
+  if (cur.trim()) out.push(cur.trim());
+  return out;
+}
+// data-br のある要素は文ごとに改行する。data-link があれば「」や "" で囲んだ部分をそのページ内リンクにする
+function setText(el, text) {
+  if (!el.hasAttribute('data-br')) { el.textContent = text; return; }
+  el.textContent = '';
+  sentences(text).forEach((line, i) => {
+    if (i) el.append(document.createElement('br'));
+    const m = el.dataset.link && /「[^」]+」|"[^"]+"/.exec(line);
+    if (!m) { el.append(line); return; }
+    const a = document.createElement('a');
+    a.href = el.dataset.link; a.textContent = m[0];
+    el.append(line.slice(0, m.index), a, line.slice(m.index + m[0].length));
+  });
+}
 function applyLang() {
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     if (!original.has(el)) original.set(el, el.textContent);
-    el.textContent = t(el.dataset.i18n) || original.get(el);
+    setText(el, t(el.dataset.i18n) || original.get(el));
   });
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
     if (!original.has(el)) original.set(el, el.getAttribute('placeholder') || '');
