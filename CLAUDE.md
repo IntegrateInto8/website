@@ -31,8 +31,7 @@
 
 - GitHub Pages（`main` ブランチのいちばん上）。住所: https://www.shimojoukoumuten-01.com/（`CNAME` ファイルで設定。DNS は Squarespace の CNAME `www` → `integrateinto8.github.io`。前の https://integrateinto8.github.io/website/ はここへ転送される。GitHub の名前は 2026-11-07 に IntegrateInto8 へ変えた）
 - www なしの住所（A レコード）は設定していない（2026-11-07）
-- 今はテスト版: `assets/config.js` の `TEST: true` で上に「テスト版」の帯を出し、各ページの `<meta name="robots" content="noindex, nofollow">` で検索に出さない
-- 本番として公開するときは、`TEST: false` にし、noindex を外す（オーナーと決める）
+- 2026-11-07 本番として公開した（`assets/config.js` の `TEST: false`、noindex を外した）。テスト版に戻すときは `TEST: true` にし、各ページに `<meta name="robots" content="noindex, nofollow">` を入れる
 - 変更は `main` から作業ブランチを切り、プルリクエストでマージする（マージすると数分でページに反映される）
 
 ## 仮の内容
