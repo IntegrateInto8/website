@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const zipBook = {};
   const zipIn = form.elements.zip, cityIn = form.elements.city;
   const zipMsg = document.getElementById('zipMsg');
-  const zipSay = key => { zipMsg.dataset.key = key; zipMsg.textContent = window.i18n.t(key) || { 'f.ziphint': '郵便番号を入れると、市区町村が自動で入ります。', 'f.zipnone': 'この郵便番号の住所が見つかりませんでした。郵便番号を確かめるか、市区町村を入れてください。' }[key]; };
+  const zipSay = key => { zipMsg.dataset.key = key; zipMsg.classList.toggle('bad', key === 'f.zipnone'); zipMsg.textContent = window.i18n.t(key) || { 'f.ziphint': '郵便番号を入れると、市区町村が自動で入ります。', 'f.zipnone': 'この郵便番号の住所が見つかりませんでした。郵便番号を確かめるか、市区町村を入れてください。' }[key]; };
   document.addEventListener('langchange', () => zipSay(zipMsg.dataset.key || 'f.ziphint'));
   zipSay('f.ziphint');
   const digits = s => s.replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0)).replace(/\D/g, '');

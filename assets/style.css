@@ -130,6 +130,10 @@ form.apply { background: var(--card); border: 1px solid var(--line); border-radi
 .field input, .field select, .field textarea { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid #cfc8bb; border-radius: 8px; background: #fff; }
 .field textarea { min-height: 120px; resize: vertical; }
 .field .hint { font-size: .85rem; color: var(--sub); margin-top: 4px; }
+/* 入力欄のすぐ下の但し書き（※つき・木の色）。うまくいかなかったときは赤 */
+.field .hint.note { font-size: .8rem; color: var(--wood-dark); margin: 6px 0 0; }
+.field .hint.note::before { content: "※ "; }
+.field .hint.note.bad { color: var(--err); }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .agree { display: flex; gap: 10px; align-items: flex-start; }
 .agree input { margin-top: 7px; width: 18px; height: 18px; }
