@@ -16,7 +16,7 @@
 - 上の帯: 左上の三本線で左から一覧（ページへのリンク）が出る、言語はプルダウン。従業員専用ページと自動販売機オンラインの帯は company の `StaffHeader.html` で同じ見た目にしている（直すときは両方そろえる）
 - `assets/i18n.js`: 言語の切り替え（日本語・English・မြန်မာ）。HTML には日本語を書き、`data-i18n="キー"` の要素を選んだ言語の文に置き換える。訳は `I18N` に足す。固有名詞（会社名など）は訳さない
 - `assets/config.js`: 応募フォームの送り先（`APPLY_URL`）と、従業員専用ページの URL（`STAFF_URL`）
-- `assets/form.js`: 応募フォームを送る
+- `assets/form.js`: 応募フォームを送る。郵便番号から市区町村を自動で入れる（yubinbango-data。https://yubinbango.github.io/yubinbango-data/ の公開データを、郵便番号の頭3けたごとに読む。JSON として読むだけでプログラムとしては動かさない）
 
 ## つながる仕組み（company リポジトリ。非公開）
 

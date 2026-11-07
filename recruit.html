@@ -139,6 +139,17 @@
             <input id="f-nation" name="nation" maxlength="50">
           </div>
         </div>
+        <div class="two">
+          <div class="field">
+            <label for="f-zip" data-i18n="f.zip">お住まいの郵便番号</label>
+            <input id="f-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="8" placeholder="180-0002">
+          </div>
+          <div class="field">
+            <label for="f-city" data-i18n="f.city">市区町村</label>
+            <input id="f-city" name="city" maxlength="100" autocomplete="off">
+          </div>
+        </div>
+        <p class="hint" id="zipMsg" style="margin:-8px 0 0">郵便番号を入れると、市区町村が自動で入ります。</p>
         <div class="field">
           <label for="f-status" data-i18n="f.status">在留資格（外国籍の方）</label>
           <input id="f-status" name="status" maxlength="100" data-i18n-ph="f.statusph" placeholder="例：特定技能、永住者">
