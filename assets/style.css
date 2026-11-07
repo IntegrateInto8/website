@@ -126,7 +126,7 @@ table.grades td.chips { white-space: normal; min-width: 150px; }
 .flow li::before { counter-increment: step; content: counter(step); display: block; width: 30px; height: 30px; line-height: 30px; margin: 0 auto 8px; border-radius: 50%; background: var(--wood); color: #fff; }
 form.apply { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: grid; gap: 18px; }
 .field label { display: block; font-weight: 700; margin-bottom: 6px; }
-.req { color: #fff; background: var(--err); font-size: .72rem; border-radius: 3px; padding: 0 6px; margin-left: 6px; vertical-align: 2px; }
+.req { display: inline-block; white-space: nowrap; color: #fff; background: var(--err); font-size: .72rem; border-radius: 3px; padding: 0 6px; margin-left: 6px; vertical-align: 2px; }
 .field input, .field select, .field textarea { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid #cfc8bb; border-radius: 8px; background: #fff; }
 .field textarea { min-height: 120px; resize: vertical; }
 .field .hint { font-size: .85rem; color: var(--sub); margin-top: 4px; }
