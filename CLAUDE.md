@@ -29,7 +29,7 @@
 
 ## 公開
 
-- GitHub Pages（`main` ブランチのいちばん上）。住所: https://www.shimojoukoumuten-01.com/（`CNAME` ファイルで設定。DNS は Squarespace の CNAME `www` → `integrateinto8.github.io`。前の https://integrateinto8.github.io/website/ はここへ転送される。GitHub の名前は 2026-11-07 に IntegrateInto8 へ変えた）
+- GitHub Pages（`main` ブランチのいちばん上）。住所: https://www.shimojoukoumuten-01.com/（`CNAME` ファイルで設定。DNS は Squarespace の CNAME `www` → `shimojo-company.github.io`。https://shimojo-company.github.io/website/ はここへ転送される。2026-11-08 に会社の GitHub アカウント `shimojo-company` へ移した。Enforce HTTPS は有効）
 - www なしの住所（A レコード）は設定していない（2026-11-07）
 - 2026-11-07 本番として公開した（`assets/config.js` の `TEST: false`、noindex を外した）。テスト版に戻すときは `TEST: true` にし、各ページに `<meta name="robots" content="noindex, nofollow">` を入れる
 - 変更は `main` から作業ブランチを切り、プルリクエストでマージする（マージすると数分でページに反映される）
