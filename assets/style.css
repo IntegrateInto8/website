@@ -158,9 +158,13 @@ button.submit:disabled { opacity: .6; cursor: default; }
 
 /* スマホ */
 @media (max-width: 760px) {
-  .site-header .wrap { gap: 8px 10px; padding-top: 8px; padding-bottom: 8px; }
-  .cta { order: 3; width: 100%; }
-  .cta .hbtn { flex: 1; text-align: center; }
+  /* 帯は1段に収める（三本線・社名・従業員専用・言語。2026-11-10 オーナー: 従業員専用が2段目に落ちないように） */
+  .site-header .wrap { gap: 8px; padding-top: 8px; padding-bottom: 8px; flex-wrap: nowrap; min-height: 56px; }
+  .burger { width: 36px; height: 36px; }
+  .brand { font-size: .85rem; line-height: 1.25; min-width: 0; flex: 1 1 auto; word-break: keep-all; } /* 入りきらないときは社名を「合同会社」と「…工務店」の2行に（HTML の <wbr> の所で折る。切らない） */
+  .cta { flex: none; }
+  .hbtn { padding: 5px 10px; font-size: .8rem; }
+  .lang-select { flex: none; font-size: .78rem; padding: 3px 4px; max-width: 76px; }
   table.grades { min-width: 560px; }
   .nav { display: none; } /* スマホでは帯のリンクは出さず、三本線の一覧から選ぶ */
   .hero .wrap, .main-biz, .strength, .two { grid-template-columns: 1fr; }
