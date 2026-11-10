@@ -21,7 +21,7 @@
 ## つながる仕組み（company リポジトリ。非公開）
 
 - 応募フォームの送り先: `company/recruit-form/`（Apps Script。応募はオーナーのスプレッドシートにだけ保存し、メールで知らせる）
-- 従業員専用ページ: `company/pay-standards/`（合言葉と名前・生年月日で入る Apps Script のページ）
+- 従業員専用ページ: `company/timecard/`（Firebase。https://staff-timecard-8181e.web.app/ 。メールアドレスとパスワードで入る。2026-11-11 に、合言葉と名前・生年月日で入る `company/pay-standards/` から切り替えた）
 
 ## 見た目を確かめる
 
