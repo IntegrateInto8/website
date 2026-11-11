@@ -31,6 +31,7 @@
 ## 公開
 
 - GitHub Pages（`main` ブランチのいちばん上）。住所: https://www.shimojoukoumuten-01.com/（`CNAME` ファイルで設定。DNS は Squarespace の CNAME `www` → `shimojo-company.github.io`。https://shimojo-company.github.io/website/ はここへ転送される。2026-11-08 に会社の GitHub アカウント `shimojo-company` へ移した。Enforce HTTPS は有効）
+- Google Search Console（Google の検索に載せるための管理画面）に `https://www.shimojoukoumuten-01.com/` を登録した（2026-11-11。持ち主の確認は自動で済んでいた）。同じ日にサイトマップ（`sitemap.xml`）を送り、トップのインデックス登録（検索結果に載せてもらう申し込み）をした。載ったかは `site:www.shimojoukoumuten-01.com` で検索するか、Search Console の「ページ」で見る
 - www なしの住所（A レコード）は設定していない（2026-11-07）
 - 2026-11-07 本番として公開した（`assets/config.js` の `TEST: false`、noindex を外した）。テスト版に戻すときは `TEST: true` にし、各ページに `<meta name="robots" content="noindex, nofollow">` を入れる
 - 変更は `main` から作業ブランチを切り、プルリクエストでマージする（マージすると数分でページに反映される）
